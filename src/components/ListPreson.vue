@@ -1,25 +1,50 @@
 <template>
   <ul>
-    <PresonComponent
+    
+    
+    <!--
+      <PresonComponent
       v-for="(item, index) in employees"
-      :id="item.id"
+
       :key="index"
       :name="item.name"
       :salary="item.salary"
       :department="item.department"
+      :id="item.id"
       :isvisible="item.isvisible"
-    />
+      @showEMP="togggleShow"       
+      @delete="remove"
+      />
+            
+       @show = ตั้งขึ้นมาเอง  -->
   </ul>
 </template>
 
 <script>
-import PresonComponent from './PresonComponent.vue'
+//import PresonComponent from './PresonComponent.vue'
 
 export default {
   name: 'ListPreson',
 
+
   components: {
-    PresonComponent
+   // PresonComponent,
+  },
+  /*
+  methods:{
+    togggleShow(id){
+      this.employees = this.employees.map((item)=>{
+        if(item.id === id){
+          return {...item,isvisible:!item.isvisible}
+        }
+        return item
+      })
+    },
+    remove(id){
+      this.employees = this.employees.filter(item=>{
+        return item.id !== id
+      })
+    },
   },
   data() {
     return {
@@ -32,6 +57,7 @@ export default {
       ]
     }
   }
+  */
 }
 </script>
 
